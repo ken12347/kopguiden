@@ -164,8 +164,32 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI'
 .rea-badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.75rem;font-weight:800}
 .rea-ok{background:#dcfce7;color:#166534}.rea-mid{background:#fef3c7;color:#92400e}.rea-warn{background:#fee2e2;color:#991b1b}
 .rea-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+
+.save-btn{display:inline-flex;align-items:center;gap:5px;padding:9px 13px;border-radius:10px;border:1px solid #cbd5e1;background:#fff;color:#0f172a;font:inherit;font-size:.84rem;font-weight:700;cursor:pointer;transition:.15s}
+.save-btn:hover{border-color:#0f172a;background:#f8fafc}
+.save-btn.saved{background:#fef2f2;border-color:#fca5a5;color:#b91c1c}
+#kg-fab{position:fixed;bottom:18px;right:16px;z-index:950;display:none;align-items:center;gap:8px;background:#0f172a;color:#fff;border:2px solid #f59e0b;border-radius:999px;padding:11px 16px;font:inherit;font-size:.88rem;font-weight:800;box-shadow:0 10px 28px rgba(15,23,42,.3);cursor:pointer;transition:bottom .2s}
+body.sticky-on #kg-fab{bottom:78px}
+#kg-bg{position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:980;display:none}
+#kg-drawer{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(540px,100%);max-height:82vh;overflow-y:auto;background:#fff;border-radius:20px 20px 0 0;padding:20px;z-index:990;display:none;box-shadow:0 -12px 40px rgba(15,23,42,.25);box-sizing:border-box}
+.w-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.w-item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid #e2e8f0}
+.w-acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+#kg-sticky{position:fixed;left:0;right:0;bottom:0;z-index:900;background:rgba(15,23,42,.96);backdrop-filter:blur(8px);color:#fff;padding:10px 14px;border-top:2px solid #f59e0b;display:none}
+.st-in{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.st-info{min-width:0}.st-t{font-weight:800;font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.st-s{font-size:.78rem;color:#fde68a;font-weight:700}
+.st-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.st-x{background:none;border:0;color:#94a3b8;font-size:1.1rem;cursor:pointer;padding:4px 6px}
+.finder-panel{background:#fff;border:1px solid #cbd5e1;border-radius:18px;padding:20px;margin:0 0 24px;box-shadow:0 8px 26px rgba(15,23,42,.05)}
+.f-step{margin-bottom:16px}.f-step label{display:block;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:#475569;margin-bottom:8px}
+.opt-row{display:flex;flex-wrap:wrap;gap:8px}
+.opt-btn{padding:8px 13px;border-radius:999px;border:1px solid #cbd5e1;background:#f8fafc;color:#0f172a;font:inherit;font-size:.86rem;font-weight:700;cursor:pointer;transition:.15s}
+.opt-btn.active{background:#0f172a;color:#fff;border-color:#0f172a}
+.f-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.f-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}
 </style>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3481fa9b344240578675dc645ffb4dfa"}'></script><!-- End Cloudflare Web Analytics -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f172a'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='36' font-weight='800' fill='%23f59e0b' font-family='sans-serif'%3EK%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 <div id="rprog" class="read-progress"></div>
@@ -175,6 +199,7 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI'
     <nav class="nav-links">
       <a href="https://ken12347.github.io/kopguiden/">Alla guider</a>
       <a href="https://ken12347.github.io/kopguiden/rea-kollen.html">Rea-kollen</a>
+      <a href="https://ken12347.github.io/kopguiden/hitta-ratt.html">Klappväljaren</a>
       <a href="https://ken12347.github.io/kopguiden/verktyg.html">Verktyg</a>
       <a href="https://ken12347.github.io/kopguiden/om-oss.html">Om oss &amp; Kontakt</a>
     </nav>
@@ -205,6 +230,7 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI'
       <h4>Snabblänkar</h4>
       <a href="https://ken12347.github.io/kopguiden/">Alla köpguider</a>
       <a href="https://ken12347.github.io/kopguiden/rea-kollen.html">Rea-kollen (Äkta fynd)</a>
+      <a href="https://ken12347.github.io/kopguiden/hitta-ratt.html">Klapp- &amp; Köpväljaren</a>
       <a href="https://ken12347.github.io/kopguiden/verktyg.html">Smarta kalkylatorer</a>
       <a href="https://ken12347.github.io/kopguiden/basta-julklappstips-under-500.html">Julklappstips under 500 kr</a>
       <a href="https://ken12347.github.io/kopguiden/om-oss.html">Så testar vi &amp; Annonspolicy</a>
@@ -222,5 +248,22 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI'
   </div>
 </footer>
 <script>window.addEventListener('scroll',()=>{const b=document.getElementById('rprog');if(!b)return;const h=document.documentElement;const d=h.scrollHeight-h.clientHeight;b.style.width=(d>0?(h.scrollTop/d)*100:0)+'%';},{passive:true});</script>
+<button id="kg-fab" type="button" onclick="kgOpenWish()"></button>
+<div id="kg-bg" onclick="kgCloseWish()"></div>
+<div id="kg-drawer"><div class="w-head"><h3 style="margin:0">❤️ Din sparade önskelista</h3><button type="button" onclick="kgCloseWish()" style="border:0;background:#f1f5f9;border-radius:8px;padding:6px 10px;font-weight:700;cursor:pointer">Stäng ✕</button></div><div id="kg-wlist"></div><div id="kg-wtot" style="font-weight:800;margin-top:12px"></div><div class="w-acts"><button type="button" class="btn btn-sm" onclick="kgCopyWish(this)">📋 Kopiera lista (SMS/WhatsApp)</button><button type="button" class="save-btn" onclick="kgClearWish()">Rensa allt</button></div></div>
+<script>
+const KG_K="kg_wish_v1";
+const kgLoad=()=>{try{return JSON.parse(localStorage.getItem(KG_K)||"[]");}catch{return[];}};
+const kgSave=a=>{localStorage.setItem(KG_K,JSON.stringify(a));kgSync();};
+function kgToggleSave(btn){const a=kgLoad(),n=btn.dataset.n,i=a.findIndex(x=>x.n===n);if(i>=0)a.splice(i,1);else a.push({n,p:+btn.dataset.p||0,u:btn.dataset.u,c:btn.dataset.c});kgSave(a);}
+function kgRemoveWish(i){const a=kgLoad();a.splice(i,1);kgSave(a);kgRenderWish();}
+function kgClearWish(){kgSave([]);kgCloseWish();}
+function kgSync(){const a=kgLoad(),ns=new Set(a.map(x=>x.n));document.querySelectorAll(".save-btn[data-n]").forEach(b=>{const on=ns.has(b.dataset.n);b.classList.toggle("saved",on);b.textContent=on?"♥ Sparad":"♡ Spara";});const f=document.getElementById("kg-fab");if(f){f.style.display=a.length?"inline-flex":"none";f.textContent="❤️ Sparade ("+a.length+")";}}
+function kgRenderWish(){const a=kgLoad(),el=document.getElementById("kg-wlist"),tot=document.getElementById("kg-wtot");if(!a.length){el.innerHTML="<p style='color:#64748b'>Inga sparade produkter ännu.</p>";tot.textContent="";return;}let sum=0;el.innerHTML=a.map((x,i)=>{sum+=x.p;return '<div class="w-item"><div><strong>'+x.n+'</strong><div style="font-size:.8rem;color:#64748b">'+x.c+' • Ca '+x.p.toLocaleString("sv-SE")+' kr</div></div><div style="display:flex;gap:6px;align-items:center"><a class="btn btn-sm" href="'+x.u+'" target="_blank" rel="nofollow sponsored noopener">Pris →</a><button type="button" onclick="kgRemoveWish('+i+')" style="border:0;background:none;color:#94a3b8;font-size:1rem;cursor:pointer">✕</button></div></div>';}).join("");tot.textContent="Totalt riktpris: "+sum.toLocaleString("sv-SE")+" kr";}
+function kgOpenWish(){kgRenderWish();document.getElementById("kg-bg").style.display="block";document.getElementById("kg-drawer").style.display="block";}
+function kgCloseWish(){document.getElementById("kg-bg").style.display="none";document.getElementById("kg-drawer").style.display="none";}
+function kgCopyWish(btn){const a=kgLoad();if(!a.length)return;const txt="Min önskelista från KöpGuiden:\n"+a.map(x=>"• "+x.n+" (ca "+x.p+" kr) – "+x.u).join("\n");navigator.clipboard?.writeText(txt);btn.textContent="✓ Kopierad!";setTimeout(()=>btn.textContent="📋 Kopiera lista (SMS/WhatsApp)",2000);}
+document.addEventListener("DOMContentLoaded",kgSync);
+</script>
 </body>
 </html>
