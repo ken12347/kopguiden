@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://ken12347.github.io/kopguiden/sitemap.xml
