@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>KöpGuiden 2026 – Oberoende köpguider &amp; produktjämförelser</title>
-<meta name="description" content="Jämför bäst i test-produkter och prisvärda budgetval inom 39 kategorier 2026.">
+<meta name="description" content="Jämför bäst i test-produkter och prisvärda budgetval inom 45 kategorier 2026.">
 <link rel="canonical" href="https://ken12347.github.io/kopguiden/">
 
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f4f6f9;--card:#ffffff;--ink:#0f172a;--muted:#475569;--navy:#0f172a;--accent:#ea580c;--accent-h:#c2410c;--green:#15803d;--green-bg:#f0fdf4;--red:#b91c1c;--red-bg:#fef2f2;--border:#e2e8f0}
 *{box-sizing:border-box}
@@ -75,6 +76,22 @@ details p{margin:8px 0 0;color:var(--muted);font-size:.94rem}
 .rel-link{display:block;padding:12px 14px;border:1px solid var(--border);border-radius:10px;text-decoration:none;font-size:.9rem;font-weight:600;background:#f8fafc}
 .disclosure{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;font-size:.82rem;color:var(--muted);margin-top:26px}
 footer{background:var(--navy);color:#94a3b8;padding:26px 20px;font-size:.85rem;text-align:center}
+
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+.hero{background:radial-gradient(circle at 85% 15%,rgba(234,88,12,.28),transparent 42%),linear-gradient(135deg,#0b1120 0%,#1e293b 100%)}
+.cat-card{border-top:3px solid transparent;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.cat-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(15,23,42,.10);border-top-color:var(--accent)}
+.prod-card.winner{background:linear-gradient(180deg,#fffaf5 0%,#ffffff 120px);box-shadow:0 10px 28px rgba(234,88,12,.12)}
+.specs-bar{display:flex;flex-wrap:wrap;gap:7px;background:transparent;border:none;padding:0;margin:12px 0 16px}
+.spec-chip{background:#f1f5f9;border:1px solid #e2e8f0;color:#1e293b;font-size:.82rem;font-weight:600;padding:5px 10px;border-radius:8px}
+.stars{color:#f59e0b;letter-spacing:1px;margin-right:4px}
+.btn{transition:transform .12s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.method-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:30px 0 12px}
+.method-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 2px 6px rgba(15,23,42,.03)}
+.method-card h3{margin:0 0 6px;font-size:1rem}
+.method-card p{margin:0;color:var(--muted);font-size:.88rem}
 </style>
 </head>
 <body>
@@ -84,7 +101,7 @@ footer{background:var(--navy);color:#94a3b8;padding:26px 20px;font-size:.85rem;t
     <nav class="nav-links"><a href="https://ken12347.github.io/kopguiden/">Alla köpguider</a><a href="#om-oss">Så testar vi</a></nav>
   </div>
 </header>
-<section class="hero"><div class="hero-in"><h1>Hitta rätt produkt utan att betala för mycket</h1><p>Vi sammanställer specifikationer, styrkor, svagheter och aktuella dagspriser i 39 populära produktkategorier – från smarta budgetfynd till marknadens testvinnare.</p><div class="trust-row"><span class="trust-pill">✓ 39 kompletta köpguider</span><span class="trust-pill">✓ Budget- & Premiumval i varje guide</span><span class="trust-pill">✓ Daglig prisbevakning</span></div></div></section>
+<section class="hero"><div class="hero-in"><h1>Hitta rätt produkt utan att betala för mycket</h1><p>Vi sammanställer specifikationer, styrkor, svagheter och aktuella dagspriser i 45 populära produktkategorier – från smarta budgetfynd till marknadens testvinnare.</p><div class="trust-row"><span class="trust-pill">✓ 45 kompletta köpguider</span><span class="trust-pill">✓ Budget- & Premiumval i varje guide</span><span class="trust-pill">✓ Daglig prisbevakning</span></div></div></section>
 <main class="wrap">
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:20px">
   <a href="https://ken12347.github.io/kopguiden/basta-julklappstips-under-500.html" style="background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:14px;text-decoration:none">
@@ -102,7 +119,7 @@ footer{background:var(--navy);color:#94a3b8;padding:26px 20px;font-size:.85rem;t
 </div>
 <input id="q" class="search-box" type="search" placeholder="Sök kategori eller produkt (t.ex. powerbank, airfryer, elcykel, robotdammsugare)..." oninput="applyFilter()">
   <div class="filter-bar">
-    <button class="f-btn active" onclick="setTier('all',this)">Alla (39)</button>
+    <button class="f-btn active" onclick="setTier('all',this)">Alla (45)</button>
     <button class="f-btn" onclick="setTier('budget',this)">Prisvärda budgetval (från under 1 500 kr)</button>
     <button class="f-btn" onclick="setTier('mid',this)">Mellanklass</button>
     <button class="f-btn" onclick="setTier('premium',this)">Premium & Hem</button>
@@ -151,6 +168,10 @@ footer{background:var(--navy);color:#94a3b8;padding:26px 20px;font-size:.85rem;t
   <div><div class="cat-top"><span class="cat-tag">Högtryckstvätt</span><span class="cat-price">Från 1 490 kr</span></div>
   <h2>Bästa högtryckstvätten 2026 – För altan, bil &amp; stenläggning</h2><p>Jämför bästa högtryckstvättarna 2026 från Kärcher och Nilfisk utifrån arbetstryck, vattenflöde och slanglängd.</p></div>
   <div class="cat-foot"><span>Vinnare: <strong>Kärcher K5 Power Control</strong></span><span class="cat-cta">Läs guide →</span></div>
+</a><a class="cat-card" data-tier="budget" data-q="in-ear hörlurar bästa trådlösa in-ear hörlurarna 2026 – brusreducering i fickformat apple airpods pro (2:a gen usb-c)" href="https://ken12347.github.io/kopguiden/basta-in-ear-horlurar.html">
+  <div><div class="cat-top"><span class="cat-tag">In-ear hörlurar</span><span class="cat-price">Från 699 kr</span></div>
+  <h2>Bästa trådlösa in-ear hörlurarna 2026 – Brusreducering i fickformat</h2><p>Jämför bästa true wireless-hörlurarna 2026 från Apple, Sony och JBL utifrån ljud, ANC och passform.</p></div>
+  <div class="cat-foot"><span>Vinnare: <strong>Apple AirPods Pro (2:a gen USB-C)</strong></span><span class="cat-cta">Läs guide →</span></div>
 </a><a class="cat-card" data-tier="budget" data-q="isbad bästa isbadet 2026 – isolerade kallbadstunnor för altan &amp; återhämtning lumi recovery pod max" href="https://ken12347.github.io/kopguiden/basta-isbad-kallbad.html">
   <div><div class="cat-top"><span class="cat-tag">Isbad</span><span class="cat-price">Från 1 190 kr</span></div>
   <h2>Bästa isbadet 2026 – Isolerade kallbadstunnor för altan &amp; återhämtning</h2><p>Jämför bästa portabla och isolerade isbaden 2026 för kallbad hemma på altanen eller i trädgården.</p></div>
@@ -171,6 +192,10 @@ footer{background:var(--navy);color:#94a3b8;padding:26px 20px;font-size:.85rem;t
   <div><div class="cat-top"><span class="cat-tag">Kolsyremaskin</span><span class="cat-price">Från 799 kr</span></div>
   <h2>Bästa kolsyremaskinen 2026 – Rostfritt stål &amp; Smidiga bubblor hemma</h2><p>Jämför bästa kolsyremaskinerna 2026 från Aarke och SodaStream utifrån design, bubbelnivå och pris.</p></div>
   <div class="cat-foot"><span>Vinnare: <strong>Aarke Carbonator 3</strong></span><span class="cat-cta">Läs guide →</span></div>
+</a><a class="cat-card" data-tier="mid" data-q="köksmaskin bästa köksmaskinen 2026 – starka bakassistenter för deg &amp; vardagsmat ankarsrum assistent original akm 6230" href="https://ken12347.github.io/kopguiden/basta-koksmaskin.html">
+  <div><div class="cat-top"><span class="cat-tag">Köksmaskin</span><span class="cat-price">Från 2 490 kr</span></div>
+  <h2>Bästa köksmaskinen 2026 – Starka bakassistenter för deg &amp; vardagsmat</h2><p>Jämför bästa köksmaskinerna 2026 från Ankarsrum och Bosch utifrån motorstyrka, skålvolym och tillbehör.</p></div>
+  <div class="cat-foot"><span>Vinnare: <strong>Ankarsrum Assistent Original AKM 6230</strong></span><span class="cat-cta">Läs guide →</span></div>
 </a><a class="cat-card" data-tier="mid" data-q="luftrenare bästa luftrenaren 2026 – hepa-filter mot pollen, damm &amp; allergener coway ap-1512hh mighty" href="https://ken12347.github.io/kopguiden/basta-luftrenare.html">
   <div><div class="cat-top"><span class="cat-tag">Luftrenare</span><span class="cat-price">Från 1 590 kr</span></div>
   <h2>Bästa luftrenaren 2026 – HEPA-filter mot pollen, damm &amp; allergener</h2><p>Jämför bästa tystgående luftrenarna med H13/H14 HEPA-filter 2026.</p></div>
@@ -227,14 +252,26 @@ footer{background:var(--navy);color:#94a3b8;padding:26px 20px;font-size:.85rem;t
   <div><div class="cat-top"><span class="cat-tag">Soundbar</span><span class="cat-price">Från 1 490 kr</span></div>
   <h2>Bästa soundbaren 2026 – Biokänsla till TV:n utan krångliga kablar</h2><p>Jämför bästa ljudlimporna 2026 från Sonos, Samsung och JBL med Dolby Atmos och tydligt tal.</p></div>
   <div class="cat-foot"><span>Vinnare: <strong>Sonos Beam (Gen 2)</strong></span><span class="cat-cta">Läs guide →</span></div>
+</a><a class="cat-card" data-tier="budget" data-q="startbooster &amp; laddare bästa startboostern &amp; batteriladdaren 2026 – rädda bilen i vinterkylan noco boost plus gb40 (1000a)" href="https://ken12347.github.io/kopguiden/basta-startbooster-bil.html">
+  <div><div class="cat-top"><span class="cat-tag">Startbooster &amp; Laddare</span><span class="cat-price">Från 849 kr</span></div>
+  <h2>Bästa startboostern &amp; batteriladdaren 2026 – Rädda bilen i vinterkylan</h2><p>Jämför bästa portabla starthjälparna och smarta bilbatteriladdarna från NOCO och CTEK 2026.</p></div>
+  <div class="cat-foot"><span>Vinnare: <strong>NOCO Boost Plus GB40 (1000A)</strong></span><span class="cat-cta">Läs guide →</span></div>
 </a><a class="cat-card" data-tier="budget" data-q="stavmixer bästa stavmixern 2026 – kraftfull &amp; prisvärd för soppor, såser &amp; smoothies braun multiquick 7 mq7045x" href="https://ken12347.github.io/kopguiden/basta-matberedare-stavmixer.html">
   <div><div class="cat-top"><span class="cat-tag">Stavmixer</span><span class="cat-price">Från 599 kr</span></div>
   <h2>Bästa stavmixern 2026 – Kraftfull &amp; Prisvärd för soppor, såser &amp; smoothies</h2><p>Jämför bästa stavmixrarna 2026 från Braun och Bosch utifrån motoreffekt, tillbehör och stänkskydd.</p></div>
   <div class="cat-foot"><span>Vinnare: <strong>Braun MultiQuick 7 MQ7045X</strong></span><span class="cat-cta">Läs guide →</span></div>
+</a><a class="cat-card" data-tier="budget" data-q="stekpanna bästa stekpannan 2026 – kolstål, gjutjärn &amp; hållbar non-stick de buyer mineral b 28 cm (kolstål)" href="https://ken12347.github.io/kopguiden/basta-stekpanna.html">
+  <div><div class="cat-top"><span class="cat-tag">Stekpanna</span><span class="cat-price">Från 549 kr</span></div>
+  <h2>Bästa stekpannan 2026 – Kolstål, gjutjärn &amp; hållbar non-stick</h2><p>Jämför bästa stekpannorna 2026 från De Buyer och Fiskars utifrån värmespridning, stekyta och hållbarhet.</p></div>
+  <div class="cat-foot"><span>Vinnare: <strong>De Buyer Mineral B 28 cm (Kolstål)</strong></span><span class="cat-cta">Läs guide →</span></div>
 </a><a class="cat-card" data-tier="budget" data-q="sällskapsspel bästa sällskapsspelen 2026 – roligaste brädspelen för familj &amp; vuxna ticket to ride europe (svenska)" href="https://ken12347.github.io/kopguiden/basta-sallskapsspel.html">
   <div><div class="cat-top"><span class="cat-tag">Sällskapsspel</span><span class="cat-price">Från 279 kr</span></div>
   <h2>Bästa sällskapsspelen 2026 – Roligaste brädspelen för familj &amp; vuxna</h2><p>Jämför bästa sällskapsspelen 2026: prisbelönta strategispel, familjespel och snabba partyspel för julledigheten.</p></div>
   <div class="cat-foot"><span>Vinnare: <strong>Ticket to Ride Europe (Svenska)</strong></span><span class="cat-cta">Läs guide →</span></div>
+</a><a class="cat-card" data-tier="budget" data-q="tyngdtäcke bästa tyngdtäcket 2026 – djupare sömn &amp; mindre stress på natten cura pearl classic (7 / 9 kg)" href="https://ken12347.github.io/kopguiden/basta-tyngdtacke.html">
+  <div><div class="cat-top"><span class="cat-tag">Tyngdtäcke</span><span class="cat-price">Från 599 kr</span></div>
+  <h2>Bästa tyngdtäcket 2026 – Djupare sömn &amp; mindre stress på natten</h2><p>Jämför bästa tyngdtäckena 2026 från CURA utifrån vikt, andningsförmåga och tvättbarhet.</p></div>
+  <div class="cat-foot"><span>Vinnare: <strong>CURA Pearl Classic (7 / 9 kg)</strong></span><span class="cat-cta">Läs guide →</span></div>
 </a><a class="cat-card" data-tier="premium" data-q="uppblåsbart spabad bästa uppblåsbara spabadet 2026 – vinterisolerade bubbelbad för altanen lay-z-spa helsinki airjet" href="https://ken12347.github.io/kopguiden/basta-uppblasbara-spa.html">
   <div><div class="cat-top"><span class="cat-tag">Uppblåsbart spabad</span><span class="cat-price">Från 4 990 kr</span></div>
   <h2>Bästa uppblåsbara spabadet 2026 – Vinterisolerade bubbelbad för altanen</h2><p>Jämför bästa uppblåsbara spabaden 2026 med frysskydd, energisnål värmare och bubbelstrålar.</p></div>
@@ -243,6 +280,10 @@ footer{background:var(--navy);color:#94a3b8;padding:26px 20px;font-size:.85rem;t
   <div><div class="cat-top"><span class="cat-tag">Varmluftsborste</span><span class="cat-price">Från 599 kr</span></div>
   <h2>Bästa varmluftsborsten 2026 – Salongsfin styling hemma på halva tiden</h2><p>Jämför bästa varmluftsborstarna 2026 från Dyson, Shark och Revlon utifrån skonsam värme och volym.</p></div>
   <div class="cat-foot"><span>Vinnare: <strong>Shark FlexStyle 5-i-1</strong></span><span class="cat-cta">Läs guide →</span></div>
+</a><a class="cat-card" data-tier="budget" data-q="vattenkokare bästa vattenkokaren 2026 – snabb kokning &amp; temperaturkontroll för te och kaffe smeg klf04 variabel temperatur" href="https://ken12347.github.io/kopguiden/basta-vattenkokare.html">
+  <div><div class="cat-top"><span class="cat-tag">Vattenkokare</span><span class="cat-price">Från 399 kr</span></div>
+  <h2>Bästa vattenkokaren 2026 – Snabb kokning &amp; temperaturkontroll för te och kaffe</h2><p>Jämför bästa vattenkokarna 2026 från Smeg och Philips utifrån koktid, temperaturval och design.</p></div>
+  <div class="cat-foot"><span>Vinnare: <strong>Smeg KLF04 Variabel Temperatur</strong></span><span class="cat-cta">Läs guide →</span></div>
 </a><a class="cat-card" data-tier="mid" data-q="vinkyl bästa vinkylen 2026 – jämförelse av tvåzoners och fristående vinkylar caso winesafe 18 eb black" href="https://ken12347.github.io/kopguiden/basta-vinkyl.html">
   <div><div class="cat-top"><span class="cat-tag">Vinkyl</span><span class="cat-price">Från 4 290 kr</span></div>
   <h2>Bästa vinkylen 2026 – Jämförelse av tvåzoners och fristående vinkylar</h2><p>Jämför bästa vinkylarna med dubbla temperaturzoner, UV-glas och låg ljudnivå 2026.</p></div>
