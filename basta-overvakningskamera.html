@@ -135,6 +135,35 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI'
 .foot-col a:hover{color:#fff;text-decoration:underline}
 .foot-bottom{max-width:1060px;margin:22px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;color:#94a3b8}
 @media(max-width:640px){.topbar-in{flex-wrap:wrap;gap:8px}.nav-links{gap:12px;font-size:.86rem}}
+
+.feat-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:0 0 22px}
+.feat-card{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-radius:14px;text-decoration:none;border:1px solid #e2e8f0;background:#fff;color:#0f172a;transition:.15s}
+.feat-card:hover{border-color:#0f172a;transform:translateY(-2px);box-shadow:0 8px 22px rgba(15,23,42,.08)}
+.feat-tag{font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:#ea580c}
+.feat-card h3{margin:3px 0 4px;font-size:1rem}
+.feat-card p{margin:0;font-size:.84rem;color:#475569;line-height:1.4}
+.feat-arrow{font-size:1.3rem;font-weight:800;color:#0f172a}
+.tool-box{background:#fff;border:1px solid #cbd5e1;border-radius:16px;padding:20px;margin:22px 0;box-shadow:0 6px 20px rgba(15,23,42,.04)}
+.tool-box.dark{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;border-color:#334155}
+.tool-box h2,.tool-box h3{margin:0 0 6px}
+.tool-sub{margin:0 0 16px;font-size:.88rem;color:#64748b;line-height:1.5}
+.tool-box.dark .tool-sub{color:#cbd5e1}
+.t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:14px}
+.t-field label{display:block;font-size:.8rem;font-weight:700;margin-bottom:5px}
+.t-field input,.t-field select{width:100%;padding:9px 11px;border-radius:10px;border:1px solid #cbd5e1;font:inherit;font-size:.92rem;background:#fff;color:#0f172a;box-sizing:border-box}
+.t-res{padding:14px 16px;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;font-size:.92rem;line-height:1.55}
+.tool-box.dark .t-res{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:#fff}
+.t-res.good{background:#ecfdf5;border-color:#6ee7b7;color:#065f46}
+.t-res.warn{background:#fff7ed;border-color:#fdba74;color:#9a3412}
+.t-kpi{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:8px}
+.t-kpi div{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:9px 12px;min-width:125px;color:#0f172a}
+.t-kpi strong{display:block;font-size:1.15rem;color:#0f172a}
+.t-kpi span{font-size:.75rem;color:#64748b}
+.chk-row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.chk-pill{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border-radius:10px;border:1px solid #cbd5e1;background:#f8fafc;font-size:.84rem;font-weight:600;cursor:pointer;color:#0f172a}
+.rea-badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.75rem;font-weight:800}
+.rea-ok{background:#dcfce7;color:#166534}.rea-mid{background:#fef3c7;color:#92400e}.rea-warn{background:#fee2e2;color:#991b1b}
+.rea-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
 </style>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3481fa9b344240578675dc645ffb4dfa"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
@@ -145,14 +174,15 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI'
     <a class="logo" href="https://ken12347.github.io/kopguiden/">KöpGuiden <span class="logo-badge">2026</span></a>
     <nav class="nav-links">
       <a href="https://ken12347.github.io/kopguiden/">Alla guider</a>
-      <a href="https://ken12347.github.io/kopguiden/#prisfall">Prisfall</a>
+      <a href="https://ken12347.github.io/kopguiden/rea-kollen.html">Rea-kollen</a>
+      <a href="https://ken12347.github.io/kopguiden/verktyg.html">Verktyg</a>
       <a href="https://ken12347.github.io/kopguiden/om-oss.html">Om oss &amp; Kontakt</a>
     </nav>
   </div>
 </header>
 <section class="hero"><div class="hero-in"><div class="crumb"><a href="https://ken12347.github.io/kopguiden/">← Tillbaka till alla 45 köpguider</a></div><h1>Bästa övervakningskameran 2026 – Utomhus &amp; inomhus utan månadskostnad</h1><p>En modern batteri- eller solcellsdriven övervakningskamera med mörkerseende i färg och lokal lagring ger trygg koll på uppfart och entré direkt i mobilen.</p><div class="trust-row"><span class="trust-pill">✓ Uppdaterad 2026-11-20</span><span class="trust-pill">✓ Premium & Budgetval</span><span class="trust-pill">✓ Dagspriser hos Amazon.se</span></div></div></section>
 <main class="wrap">
-  <div class="jump-bar"><a class="jump-pill" href="#prod-1">🏆 #1 Testvinnare</a><a class="jump-pill" href="#prod-3">💡 Alternativ &amp; Budget</a><a class="jump-pill" href="#faq">❓ Vanliga frågor</a><button type="button" class="jump-pill" onclick="navigator.clipboard?.writeText(location.href);this.textContent='✓ Länk kopierad';setTimeout(()=>this.textContent='🔗 Dela guide',2000)">🔗 Dela guide</button></div>
+  <div class="jump-bar"><a class="jump-pill" href="#prod-1">🏆 #1 Testvinnare</a><a class="jump-pill" href="#prod-3">💡 Alternativ &amp; Budget</a><a class="jump-pill" href="#verktyg-box">🧮 Kalkylator &amp; Begagnat</a><a class="jump-pill" href="#faq">❓ Vanliga frågor</a><button type="button" class="jump-pill" onclick="navigator.clipboard?.writeText(location.href);this.textContent='✓ Länk kopierad';setTimeout(()=>this.textContent='🔗 Dela guide',2000)">🔗 Dela guide</button></div>
   <div class="summary-box"><h2>Snabböversikt – Toppvalen i kategorin</h2><div class="tbl-wrap"><table><thead><tr><th>Modell</th><th>Betyg</th><th>Riktpris</th><th>Butik</th></tr></thead><tbody><tr><td><a href="#prod-1" style="text-decoration:underline;font-weight:700">#1 Eufy SoloCam S340 (Solcell)</a><br><span style="color:#64748b;font-size:.82rem">Bäst i test 2026</span></td><td>★ 4.8/5</td><td><strong>1 990 kr</strong></td><td><a class="btn btn-sm" href="https://www.amazon.se/s?k=Eufy+SoloCam+S340&amp;tag=kopguiden0e-21" target="_blank" rel="nofollow sponsored noopener">Kolla pris →</a></td></tr><tr><td><a href="#prod-2" style="text-decoration:underline;font-weight:700">#2 TP-Link Tapo C320WS</a><br><span style="color:#64748b;font-size:.82rem">Bästa budgetval</span></td><td>★ 4.6/5</td><td><strong>599 kr</strong></td><td><a class="btn btn-sm" href="https://www.amazon.se/s?k=TP-Link+Tapo+C320WS&amp;tag=kopguiden0e-21" target="_blank" rel="nofollow sponsored noopener">Kolla pris →</a></td></tr><tr><td><a href="#prod-3" style="text-decoration:underline;font-weight:700">#3 Reolink Argus 3 Ultra</a><br><span style="color:#64748b;font-size:.82rem">Bästa 4K-kamera</span></td><td>★ 4.6/5</td><td><strong>1 390 kr</strong></td><td><a class="btn btn-sm" href="https://www.amazon.se/s?k=Reolink+Argus+3+Ultra&amp;tag=kopguiden0e-21" target="_blank" rel="nofollow sponsored noopener">Kolla pris →</a></td></tr></tbody></table></div></div>
   <article id="prod-1" class="prod-card winner">
   <div class="prod-head"><div><span class="badge">#1 • Bäst i test 2026</span><h2 class="prod-title">Eufy SoloCam S340 (Solcell)</h2><div class="brand-sub">Tillverkare: Eufy • Uppdaterad 2026-11-20</div></div><div class="rating-box"><span class="stars">★★★★★</span> 4.8/5</div></div>
@@ -173,6 +203,7 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI'
   <p class="verdict">”Bästa valet när du vill ha maximal skärpa utomhus utan att dra kablar.”</p>
   <div class="buy-row"><div><span class="price-now">Ca 1 390 kr</span><span class="price-old">1 690 kr</span><span class="save-tag">Spara 300 kr</span></div><div style="display:flex;flex-wrap:wrap;gap:8px"><a class="btn" href="https://www.amazon.se/s?k=Reolink+Argus+3+Ultra&amp;tag=kopguiden0e-21" target="_blank" rel="nofollow sponsored noopener">Se dagspris hos Amazon.se →</a></div></div>
 </article>
+  <section id="verktyg-box" class="tool-box"><h2>⚖️ Nytt vs. Begagnat – Lönar sig Blocket/Tradera för övervakningskamera?</h2><p class="tool-sub">Testvinnaren <strong>Eufy SoloCam S340 (Solcell)</strong> kostar ca <strong>1 990 kr</strong> ny. Innehåller dyrt batteri, motor eller sensorer som kostar mycket att byta utan garanti. Vår smärtgräns för begagnat är <strong>1 190 kr</strong> (60 % av nypriset).</p><div class="t-grid"><div class="t-field"><label for="u_ask">Vad begär säljaren på Blocket / Tradera? (kr)</label><input id="u_ask" type="number" min="0" step="50" value="1470" oninput="calcUsed()"></div><div class="t-field"><label for="u_age">Skick &amp; kvitto</label><select id="u_age" onchange="calcUsed()"><option value="0">Bra skick, kvitto/garanti kvar</option><option value="0.08" selected>Använd, inget kvitto</option><option value="0.18">Sliten eller över 2 år gammal</option></select></div></div><div id="u_out" class="t-res"></div></section><script>function calcUsed(){const np=1990,base=0.60,ask=+document.getElementById("u_ask").value||0,pen=+document.getElementById("u_age").value||0,lim=Math.max(50,Math.round((np*(base-pen))/10)*10),diff=np-ask,el=document.getElementById("u_out");if(ask<=0){el.className="t-res";el.innerHTML="Skriv in priset från annonsen ovan så räknar vi ut om det är värt det.";return;}if(ask>lim){el.className="t-res warn";el.innerHTML="<strong>⚠️ För dyrt begagnat!</strong> Med valt skick bör du betala max <strong>"+lim.toLocaleString("sv-SE")+" kr</strong>. Du sparar bara <strong>"+Math.max(0,diff).toLocaleString("sv-SE")+" kr</strong> men tappar garanti och öppet köp. <div style=\"margin-top:10px\"><a class=\"btn btn-sm\" href=\"https://www.amazon.se/s?k=Eufy+SoloCam+S340&amp;tag=kopguiden0e-21\" target=\"_blank\" rel=\"nofollow sponsored noopener\">Köp ny med garanti hos Amazon.se →</a></div>";}else{el.className="t-res good";el.innerHTML="<strong>✅ Bra begagnatfynd!</strong> Priset ligger under vår smärtgräns ("+lim.toLocaleString("sv-SE")+" kr) och du sparar <strong>"+diff.toLocaleString("sv-SE")+" kr</strong> mot nypris. Kontrollera bara batteri/funktion före köp.";}}calcUsed();</script>
   <section id="faq" class="faq-box"><h2>Vanliga frågor om övervakningskamera</h2><details open><summary>Vilken övervakningskamera är bäst i test 2026?</summary><p>Vår testvinnare 2026 är Eufy SoloCam S340 (Solcell) (Eufy) med betyget 4.8/5.</p></details><details><summary>Vilket är det mest prisvärda budgetvalet för övervakningskamera?</summary><p>För dig som vill hålla nere kostnaden rekommenderar vi Reolink Argus 3 Ultra till ett riktpris omkring 1 390 kr.</p></details><details><summary>Hur uppdateras priser och rekommendationer på KöpGuiden?</summary><p>Priser kontrolleras automatiskt varje dag och guiden uppdaterades senast 2026-11-20.</p></details></section>
   <section class="rel-box"><h2>Fler populära köpguider 2026</h2><div class="rel-grid"><a class="rel-link" href="https://ken12347.github.io/kopguiden/basta-airfryer.html">Airfryer →</a><a class="rel-link" href="https://ken12347.github.io/kopguiden/basta-tradlos-hogtalare.html">Bluetooth-högtalare →</a><a class="rel-link" href="https://ken12347.github.io/kopguiden/basta-brusreducerande-horlurar.html">Brusreducerande hörlurar →</a><a class="rel-link" href="https://ken12347.github.io/kopguiden/barbar-elstation-powerstation.html">Bärbar elstation →</a></div></section>
   <div class="author-box"><div><strong>Granskad av KöpGuidens redaktion</strong> • Senast uppdaterad 2026-11-20. Hittat något som inte stämmer? <a href="mailto:ken.eriksson96@gmail.com">Mejla oss</a>.</div><a href="https://ken12347.github.io/kopguiden/om-oss.html">Så testar vi →</a></div>
@@ -187,7 +218,8 @@ body{font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI'
     <div class="foot-col">
       <h4>Snabblänkar</h4>
       <a href="https://ken12347.github.io/kopguiden/">Alla köpguider</a>
-      <a href="https://ken12347.github.io/kopguiden/#prisfall">Veckans största prisfall</a>
+      <a href="https://ken12347.github.io/kopguiden/rea-kollen.html">Rea-kollen (Äkta fynd)</a>
+      <a href="https://ken12347.github.io/kopguiden/verktyg.html">Smarta kalkylatorer</a>
       <a href="https://ken12347.github.io/kopguiden/basta-julklappstips-under-500.html">Julklappstips under 500 kr</a>
       <a href="https://ken12347.github.io/kopguiden/om-oss.html">Så testar vi &amp; Annonspolicy</a>
     </div>
