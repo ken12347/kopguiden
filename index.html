@@ -190,6 +190,23 @@ body.sticky-on #kg-fab{bottom:78px}
 .grp-bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
 .f-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}
 
+.topbar{position:relative;z-index:200}
+.nav-links{display:flex;align-items:center;gap:14px;overflow:visible!important;white-space:nowrap}
+.nav-dd{position:relative}
+.nav-dd summary{list-style:none;cursor:pointer;font-weight:700;color:inherit;display:inline-flex;align-items:center;gap:4px;padding:5px 9px;border-radius:8px;user-select:none}
+.nav-dd summary::-webkit-details-marker{display:none}
+.nav-dd[open] summary,.nav-dd summary:hover{background:rgba(148,163,184,.2)}
+.nav-dd-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:225px;background:#fff;border:1px solid #cbd5e1;border-radius:14px;box-shadow:0 16px 36px rgba(15,23,42,.2);padding:6px;z-index:999;display:flex;flex-direction:column;gap:2px}
+.nav-dd-menu a{display:block;padding:10px 12px;border-radius:10px;color:#0f172a!important;text-decoration:none;font-size:.88rem;font-weight:700;white-space:nowrap}
+.nav-dd-menu a:hover{background:#f1f5f9}
+.tools-dock{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 20px}
+.dock-item{display:flex;align-items:center;gap:10px;padding:12px 13px;border-radius:14px;background:#fff;border:1px solid #e2e8f0;text-decoration:none;color:#0f172a;transition:.15s}
+.dock-item:hover{border-color:#0f172a;transform:translateY(-2px);box-shadow:0 8px 20px rgba(15,23,42,.08)}
+.dock-ico{font-size:1.3rem;line-height:1}
+.dock-t{font-weight:800;font-size:.86rem;line-height:1.2}
+.dock-s{font-size:.74rem;color:#64748b;margin-top:2px}
+@media(max-width:720px){.tools-dock{grid-template-columns:1fr 1fr}.nav-links{gap:10px;font-size:.86rem}}
+
 .nav-links{display:flex;gap:14px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}.nav-links::-webkit-scrollbar{display:none}
 .bold-hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:0 0 22px}
 .bold-card{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-radius:16px;text-decoration:none;color:#fff;transition:.15s;border:1px solid rgba(255,255,255,.14)}
@@ -221,43 +238,31 @@ body.sticky-on #kg-fab{bottom:78px}
   <div class="topbar-in">
     <a class="logo" href="https://ken12347.github.io/kopguiden/">KöpGuiden <span class="logo-badge">2026</span></a>
     <nav class="nav-links">
-      <a href="https://ken12347.github.io/kopguiden/">Alla guider</a>
+      <a href="https://ken12347.github.io/kopguiden/">Guider</a>
       <a href="https://ken12347.github.io/kopguiden/rea-kollen.html">Rea-kollen</a>
-      <a href="https://ken12347.github.io/kopguiden/hitta-ratt.html">Klappväljaren</a>
-      <a href="https://ken12347.github.io/kopguiden/verktyg.html">Verktyg</a>
-      <a href="https://ken12347.github.io/kopguiden/duellen.html">⚔️ Duellen</a>
-      <a href="https://ken12347.github.io/kopguiden/kopbromsen.html">🛑 Köp-Bromsen</a>
+      <details class="nav-dd">
+        <summary>Verktyg ▾</summary>
+        <div class="nav-dd-menu">
+          <a href="https://ken12347.github.io/kopguiden/hitta-ratt.html">🎁 Klapp- &amp; Köpväljaren</a>
+          <a href="https://ken12347.github.io/kopguiden/duellen.html">⚔️ Duell-Arenan</a>
+          <a href="https://ken12347.github.io/kopguiden/kopbromsen.html">🛑 Köp-Bromsen</a>
+          <a href="https://ken12347.github.io/kopguiden/verktyg.html">🧮 Sparkalkylatorer</a>
+        </div>
+      </details>
       <a href="https://ken12347.github.io/kopguiden/om-oss.html">Om oss</a>
     </nav>
   </div>
 </header>
 <section class="hero"><div class="hero-in"><h1>Hitta rätt produkt utan att betala för mycket</h1><p>Vi sammanställer specifikationer, styrkor, svagheter och aktuella dagspriser i 45 populära produktkategorier – från smarta budgetfynd till marknadens testvinnare.</p><div class="trust-row"><span class="trust-pill">✓ 45 kompletta köpguider</span><span class="trust-pill">✓ Budget- & Premiumval i varje guide</span><span class="trust-pill">✓ Uppdaterade riktpriser</span></div></div></section>
 <main class="wrap">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:20px">
-  <a href="https://ken12347.github.io/kopguiden/basta-julklappstips-under-500.html" style="background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:14px;text-decoration:none">
-    <div style="font-size:.75rem;font-weight:800;color:#ea580c">SÄSONGSFAVORIT</div>
-    <div style="font-weight:700;margin-top:2px">Julklappstips under 500 kr →</div>
-  </a>
-  <a href="https://ken12347.github.io/kopguiden/basta-varmefilt-varmedyna.html" style="background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:14px;text-decoration:none">
-    <div style="font-size:.75rem;font-weight:800;color:#ea580c">VINTERMYS & ELSPAR</div>
-    <div style="font-weight:700;margin-top:2px">Bästa värmefilten 2026 →</div>
-  </a>
-  <a href="https://ken12347.github.io/kopguiden/basta-airfryer.html" style="background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:14px;text-decoration:none">
-    <div style="font-size:.75rem;font-weight:800;color:#ea580c">MEST LÄSTA GUIDE</div>
-    <div style="font-weight:700;margin-top:2px">Bästa airfryern 2026 →</div>
-  </a>
+  <section id="prisfall" class="deals-sec"><div class="deals-head"><h2>🔥 Veckans största prisfall</h2><span>Automatiskt uppdaterat 2026-11-21 • <a href="https://ken12347.github.io/kopguiden/rea-kollen.html" style="color:#fde68a;font-weight:700;text-decoration:none">Se hela Rea-kollen →</a></span></div><div class="deals-grid"><a class="deal-card" href="https://ken12347.github.io/kopguiden/basta-brusreducerande-horlurar.html#prod-3"><div class="deal-top"><span class="deal-pct">-34 %</span><span class="deal-cat">Brusreducerande hörlurar</span></div><div class="deal-name">Soundcore Space Q45 by Anker</div><div class="deal-prices"><span class="deal-now">990 kr</span><span class="deal-old">1 490 kr</span></div></a><a class="deal-card" href="https://ken12347.github.io/kopguiden/basta-eltandborste.html#prod-2"><div class="deal-top"><span class="deal-pct">-31 %</span><span class="deal-cat">Eltandborste</span></div><div class="deal-name">Oral-B Pro 3 3500</div><div class="deal-prices"><span class="deal-now">549 kr</span><span class="deal-old">799 kr</span></div></a><a class="deal-card" href="https://ken12347.github.io/kopguiden/basta-in-ear-horlurar.html#prod-2"><div class="deal-top"><span class="deal-pct">-30 %</span><span class="deal-cat">In-ear hörlurar</span></div><div class="deal-name">JBL Tune Beam</div><div class="deal-prices"><span class="deal-now">699 kr</span><span class="deal-old">999 kr</span></div></a><a class="deal-card" href="https://ken12347.github.io/kopguiden/basta-tyngdtacke.html#prod-3"><div class="deal-top"><span class="deal-pct">-27 %</span><span class="deal-cat">Tyngdtäcke</span></div><div class="deal-name">Beckasin Tyngdtäcke 8 kg</div><div class="deal-prices"><span class="deal-now">799 kr</span><span class="deal-old">1 090 kr</span></div></a></div></section>
+  <div class="tools-dock">
+  <a class="dock-item" href="https://ken12347.github.io/kopguiden/hitta-ratt.html"><span class="dock-ico">🎁</span><div><div class="dock-t">Klappväljaren</div><div class="dock-s">Hitta rätt på 10 sek</div></div></a>
+  <a class="dock-item" href="https://ken12347.github.io/kopguiden/duellen.html"><span class="dock-ico">⚔️</span><div><div class="dock-t">Duell-Arenan</div><div class="dock-s">1-mot-1 jämförelse</div></div></a>
+  <a class="dock-item" href="https://ken12347.github.io/kopguiden/kopbromsen.html"><span class="dock-ico">🛑</span><div><div class="dock-t">Köp-Bromsen</div><div class="dock-s">Ska du ens köpa?</div></div></a>
+  <a class="dock-item" href="https://ken12347.github.io/kopguiden/verktyg.html"><span class="dock-ico">🧮</span><div><div class="dock-t">Kalkylatorer</div><div class="dock-s">El, tid &amp; besparing</div></div></a>
 </div>
-<section id="prisfall" class="deals-sec"><div class="deals-head"><h2>🔥 Veckans största prisfall</h2><span>Automatiskt uppdaterat 2026-11-21 • <a href="https://ken12347.github.io/kopguiden/rea-kollen.html" style="color:#fde68a;font-weight:700;text-decoration:none">Se hela Rea-kollen →</a></span></div><div class="deals-grid"><a class="deal-card" href="https://ken12347.github.io/kopguiden/basta-brusreducerande-horlurar.html#prod-3"><div class="deal-top"><span class="deal-pct">-34 %</span><span class="deal-cat">Brusreducerande hörlurar</span></div><div class="deal-name">Soundcore Space Q45 by Anker</div><div class="deal-prices"><span class="deal-now">990 kr</span><span class="deal-old">1 490 kr</span></div></a><a class="deal-card" href="https://ken12347.github.io/kopguiden/basta-eltandborste.html#prod-2"><div class="deal-top"><span class="deal-pct">-31 %</span><span class="deal-cat">Eltandborste</span></div><div class="deal-name">Oral-B Pro 3 3500</div><div class="deal-prices"><span class="deal-now">549 kr</span><span class="deal-old">799 kr</span></div></a><a class="deal-card" href="https://ken12347.github.io/kopguiden/basta-in-ear-horlurar.html#prod-2"><div class="deal-top"><span class="deal-pct">-30 %</span><span class="deal-cat">In-ear hörlurar</span></div><div class="deal-name">JBL Tune Beam</div><div class="deal-prices"><span class="deal-now">699 kr</span><span class="deal-old">999 kr</span></div></a><a class="deal-card" href="https://ken12347.github.io/kopguiden/basta-tyngdtacke.html#prod-3"><div class="deal-top"><span class="deal-pct">-27 %</span><span class="deal-cat">Tyngdtäcke</span></div><div class="deal-name">Beckasin Tyngdtäcke 8 kg</div><div class="deal-prices"><span class="deal-now">799 kr</span><span class="deal-old">1 090 kr</span></div></a></div></section>
-<div class="feat-strip">
-  <a class="feat-card" href="https://ken12347.github.io/kopguiden/rea-kollen.html"><div><span class="feat-tag">ÄRLIG PRISKOLL</span><h3>🔥 Rea-kollen: Äkta fynd vs. låtsasreor</h3><p>Se vilka testvinnare som har störst prisgap mot ordinarie riktpris just nu.</p></div><span class="feat-arrow">→</span></a>
-  <a class="feat-card" href="https://ken12347.github.io/kopguiden/verktyg.html"><div><span class="feat-tag">GRATIS VERKTYG</span><h3>🧮 Smarta sparkalkylatorer</h3><p>Räkna ut återbetalningstid för elcykel, airfryer, spabad, powerstation &amp; robotklippare.</p></div><span class="feat-arrow">→</span></a>
-</div>
-<a class="feat-card" style="background:linear-gradient(135deg,#fff7ed,#fef3c7);border-color:#fcd34d;margin-bottom:20px" href="https://ken12347.github.io/kopguiden/hitta-ratt.html"><div><span class="feat-tag">🎁 NYHET • 10-SEKUNDERSVÄLJAREN</span><h3>Osäker på vad du ska köpa? Testa Klapp- &amp; Köpväljaren</h3><p>Välj budget och intresse så sållar vi fram de bästa prylarna och största rabatterna ur alla 135+ produkter.</p></div><span class="feat-arrow">→</span></a>
-<div class="bold-hero">
-  <a class="bold-card red" href="https://ken12347.github.io/kopguiden/kopbromsen.html"><div><span class="bold-tag">🛑 ANTI-IMPULSTESTET</span><h3>Köp-Bromsen: Ska du ens köpa den?</h3><p>Sveriges ärligaste test. Räknar ut pris per användning &amp; arbetstimmar – och ber dig stänga fliken om det är ett dumköp.</p></div><span style="font-size:1.4rem;font-weight:800">→</span></a>
-  <a class="bold-card duel" href="https://ken12347.github.io/kopguiden/duellen.html"><div><span class="bold-tag">⚔️ 1-MOT-1-JÄMFÖRELSE</span><h3>Duell-Arenan: Vinnare vs. Budget</h3><p>Ställ två modeller mot varandra och se vad prisskillnaden motsvarar i pizzor, kaffe och faktiskt värde.</p></div><span style="font-size:1.4rem;font-weight:800">→</span></a>
-</div>
-<input id="q" class="search-box" type="search" placeholder="Sök kategori eller produkt (t.ex. powerbank, airfryer, elcykel, robotdammsugare)..." oninput="applyFilter()">
+  <input id="q" class="search-box" type="search" placeholder="Sök kategori eller produkt (t.ex. powerbank, airfryer, elcykel, robotdammsugare)..." oninput="applyFilter()">
   <div class="grp-bar">
     <button class="f-btn f-grp active" onclick="setGrp('all',this)">Alla områden (45)</button>
     <button class="f-btn f-grp" onclick="setGrp('kok',this)">🍳 Kök &amp; Mat</button>
@@ -507,6 +512,7 @@ function kgOpenWish(){kgRenderWish();document.getElementById("kg-bg").style.disp
 function kgCloseWish(){document.getElementById("kg-bg").style.display="none";document.getElementById("kg-drawer").style.display="none";}
 function kgCopyWish(btn){const a=kgLoad();if(!a.length)return;const txt="Min önskelista från KöpGuiden:\n"+a.map(x=>"• "+x.n+" (ca "+x.p+" kr) – "+x.u).join("\n");navigator.clipboard?.writeText(txt);btn.textContent="✓ Kopierad!";setTimeout(()=>btn.textContent="📋 Kopiera lista (SMS/WhatsApp)",2000);}
 document.addEventListener("DOMContentLoaded",kgSync);
+document.addEventListener("click",e=>{document.querySelectorAll(".nav-dd[open]").forEach(d=>{if(!d.contains(e.target))d.open=false;});});
 </script>
 </body>
 </html>

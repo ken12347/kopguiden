@@ -190,6 +190,23 @@ body.sticky-on #kg-fab{bottom:78px}
 .grp-bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
 .f-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}
 
+.topbar{position:relative;z-index:200}
+.nav-links{display:flex;align-items:center;gap:14px;overflow:visible!important;white-space:nowrap}
+.nav-dd{position:relative}
+.nav-dd summary{list-style:none;cursor:pointer;font-weight:700;color:inherit;display:inline-flex;align-items:center;gap:4px;padding:5px 9px;border-radius:8px;user-select:none}
+.nav-dd summary::-webkit-details-marker{display:none}
+.nav-dd[open] summary,.nav-dd summary:hover{background:rgba(148,163,184,.2)}
+.nav-dd-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:225px;background:#fff;border:1px solid #cbd5e1;border-radius:14px;box-shadow:0 16px 36px rgba(15,23,42,.2);padding:6px;z-index:999;display:flex;flex-direction:column;gap:2px}
+.nav-dd-menu a{display:block;padding:10px 12px;border-radius:10px;color:#0f172a!important;text-decoration:none;font-size:.88rem;font-weight:700;white-space:nowrap}
+.nav-dd-menu a:hover{background:#f1f5f9}
+.tools-dock{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 20px}
+.dock-item{display:flex;align-items:center;gap:10px;padding:12px 13px;border-radius:14px;background:#fff;border:1px solid #e2e8f0;text-decoration:none;color:#0f172a;transition:.15s}
+.dock-item:hover{border-color:#0f172a;transform:translateY(-2px);box-shadow:0 8px 20px rgba(15,23,42,.08)}
+.dock-ico{font-size:1.3rem;line-height:1}
+.dock-t{font-weight:800;font-size:.86rem;line-height:1.2}
+.dock-s{font-size:.74rem;color:#64748b;margin-top:2px}
+@media(max-width:720px){.tools-dock{grid-template-columns:1fr 1fr}.nav-links{gap:10px;font-size:.86rem}}
+
 .nav-links{display:flex;gap:14px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}.nav-links::-webkit-scrollbar{display:none}
 .bold-hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:0 0 22px}
 .bold-card{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-radius:16px;text-decoration:none;color:#fff;transition:.15s;border:1px solid rgba(255,255,255,.14)}
@@ -221,12 +238,17 @@ body.sticky-on #kg-fab{bottom:78px}
   <div class="topbar-in">
     <a class="logo" href="https://ken12347.github.io/kopguiden/">KöpGuiden <span class="logo-badge">2026</span></a>
     <nav class="nav-links">
-      <a href="https://ken12347.github.io/kopguiden/">Alla guider</a>
+      <a href="https://ken12347.github.io/kopguiden/">Guider</a>
       <a href="https://ken12347.github.io/kopguiden/rea-kollen.html">Rea-kollen</a>
-      <a href="https://ken12347.github.io/kopguiden/hitta-ratt.html">Klappväljaren</a>
-      <a href="https://ken12347.github.io/kopguiden/verktyg.html">Verktyg</a>
-      <a href="https://ken12347.github.io/kopguiden/duellen.html">⚔️ Duellen</a>
-      <a href="https://ken12347.github.io/kopguiden/kopbromsen.html">🛑 Köp-Bromsen</a>
+      <details class="nav-dd">
+        <summary>Verktyg ▾</summary>
+        <div class="nav-dd-menu">
+          <a href="https://ken12347.github.io/kopguiden/hitta-ratt.html">🎁 Klapp- &amp; Köpväljaren</a>
+          <a href="https://ken12347.github.io/kopguiden/duellen.html">⚔️ Duell-Arenan</a>
+          <a href="https://ken12347.github.io/kopguiden/kopbromsen.html">🛑 Köp-Bromsen</a>
+          <a href="https://ken12347.github.io/kopguiden/verktyg.html">🧮 Sparkalkylatorer</a>
+        </div>
+      </details>
       <a href="https://ken12347.github.io/kopguiden/om-oss.html">Om oss</a>
     </nav>
   </div>
@@ -292,6 +314,7 @@ function kgOpenWish(){kgRenderWish();document.getElementById("kg-bg").style.disp
 function kgCloseWish(){document.getElementById("kg-bg").style.display="none";document.getElementById("kg-drawer").style.display="none";}
 function kgCopyWish(btn){const a=kgLoad();if(!a.length)return;const txt="Min önskelista från KöpGuiden:\n"+a.map(x=>"• "+x.n+" (ca "+x.p+" kr) – "+x.u).join("\n");navigator.clipboard?.writeText(txt);btn.textContent="✓ Kopierad!";setTimeout(()=>btn.textContent="📋 Kopiera lista (SMS/WhatsApp)",2000);}
 document.addEventListener("DOMContentLoaded",kgSync);
+document.addEventListener("click",e=>{document.querySelectorAll(".nav-dd[open]").forEach(d=>{if(!d.contains(e.target))d.open=false;});});
 </script>
 </body>
 </html>
