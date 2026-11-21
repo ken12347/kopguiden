@@ -189,6 +189,28 @@ body.sticky-on #kg-fab{bottom:78px}
 .nav-links{display:flex;gap:14px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}.nav-links::-webkit-scrollbar{display:none}
 .grp-bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
 .f-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}
+
+.nav-links{display:flex;gap:14px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}.nav-links::-webkit-scrollbar{display:none}
+.bold-hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:0 0 22px}
+.bold-card{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-radius:16px;text-decoration:none;color:#fff;transition:.15s;border:1px solid rgba(255,255,255,.14)}
+.bold-card.red{background:linear-gradient(135deg,#7f1d1d,#991b1b)}
+.bold-card.duel{background:linear-gradient(135deg,#1e1b4b,#312e81)}
+.bold-card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(15,23,42,.22)}
+.bold-tag{font-size:.7rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#fde68a}
+.bold-card h3{margin:3px 0 4px;font-size:1.02rem;color:#fff}
+.bold-card p{margin:0;font-size:.83rem;color:#e2e8f0;line-height:1.45}
+.kb-box{background:linear-gradient(135deg,#fff,#fef2f2);border:2px solid #fecaca;border-radius:16px;padding:20px;margin:22px 0}
+.kb-res{padding:15px 16px;border-radius:12px;margin-top:12px;font-size:.92rem;line-height:1.55}
+.kb-stop{background:#fef2f2;border:2px solid #ef4444;color:#7f1d1d}
+.kb-warn{background:#fffbeb;border:2px solid #f59e0b;color:#78350f}
+.kb-go{background:#ecfdf5;border:2px solid #10b981;color:#065f46}
+.duel-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin:16px 0}
+.fighter{background:#fff;border:2px solid #e2e8f0;border-radius:16px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.fighter.champ{border-color:#f59e0b;box-shadow:0 10px 26px rgba(245,158,11,.14)}
+.duel-verdict{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;border-radius:16px;padding:20px;margin:18px 0}
+.duel-verdict h3{margin:0 0 6px;color:#fde68a}
+.duel-gap{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.duel-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);padding:7px 12px;border-radius:999px;font-size:.84rem;font-weight:700}
 </style>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3481fa9b344240578675dc645ffb4dfa"}'></script><!-- End Cloudflare Web Analytics -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f172a'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='36' font-weight='800' fill='%23f59e0b' font-family='sans-serif'%3EK%3C/text%3E%3C/svg%3E">
@@ -203,13 +225,15 @@ body.sticky-on #kg-fab{bottom:78px}
       <a href="https://ken12347.github.io/kopguiden/rea-kollen.html">Rea-kollen</a>
       <a href="https://ken12347.github.io/kopguiden/hitta-ratt.html">Klappväljaren</a>
       <a href="https://ken12347.github.io/kopguiden/verktyg.html">Verktyg</a>
-      <a href="https://ken12347.github.io/kopguiden/om-oss.html">Om oss &amp; Kontakt</a>
+      <a href="https://ken12347.github.io/kopguiden/duellen.html">⚔️ Duellen</a>
+      <a href="https://ken12347.github.io/kopguiden/kopbromsen.html">🛑 Köp-Bromsen</a>
+      <a href="https://ken12347.github.io/kopguiden/om-oss.html">Om oss</a>
     </nav>
   </div>
 </header>
 <section class="hero"><div class="hero-in"><div class="crumb"><a href="https://ken12347.github.io/kopguiden/">← Tillbaka till alla 45 köpguider</a></div><h1>Bästa vattenkokaren 2026 – Snabb kokning &amp; temperaturkontroll för te och kaffe</h1><p>En bra vattenkokare med ställbar temperatur ger perfekt bryggvatten för grönt te (80 °C) och kaffe (95 °C) på under två minuter.</p><div class="trust-row"><span class="trust-pill">✓ Uppdaterad 2026-11-20</span><span class="trust-pill">✓ Premium & Budgetval</span><span class="trust-pill">✓ Dagspriser hos Amazon.se</span></div></div></section>
 <main class="wrap">
-  <div class="jump-bar"><a class="jump-pill" href="#prod-1">🏆 #1 Testvinnare</a><a class="jump-pill" href="#prod-3">💡 Alternativ &amp; Budget</a><a class="jump-pill" href="#verktyg-box">🧮 Kalkylator &amp; Begagnat</a><a class="jump-pill" href="#faq">❓ Vanliga frågor</a><button type="button" class="jump-pill" onclick="navigator.clipboard?.writeText(location.href);this.textContent='✓ Länk kopierad';setTimeout(()=>this.textContent='🔗 Dela guide',2000)">🔗 Dela guide</button></div>
+  <div class="jump-bar"><a class="jump-pill" href="#prod-1">🏆 #1 Testvinnare</a><a class="jump-pill" href="#prod-3">💡 Alternativ &amp; Budget</a><a class="jump-pill" href="#kopbroms">🛑 Köp-Bromsen</a><a class="jump-pill" href="#verktyg-box">🧮 Kalkylator &amp; Begagnat</a><a class="jump-pill" href="#faq">❓ Vanliga frågor</a><button type="button" class="jump-pill" onclick="navigator.clipboard?.writeText(location.href);this.textContent='✓ Länk kopierad';setTimeout(()=>this.textContent='🔗 Dela guide',2000)">🔗 Dela guide</button></div>
   <div class="summary-box"><h2>Snabböversikt – Toppvalen i kategorin</h2><div class="tbl-wrap"><table><thead><tr><th>Modell</th><th>Betyg</th><th>Riktpris</th><th>Butik</th></tr></thead><tbody><tr><td><a href="#prod-1" style="text-decoration:underline;font-weight:700">#1 Smeg KLF04 Variabel Temperatur</a><br><span style="color:#64748b;font-size:.82rem">Bäst i test 2026</span></td><td>★ 4.8/5</td><td><strong>1 890 kr</strong></td><td><a class="btn btn-sm" href="https://www.amazon.se/s?k=Smeg+KLF04&amp;tag=kopguiden0e-21" target="_blank" rel="nofollow sponsored noopener">Kolla pris →</a></td></tr><tr><td><a href="#prod-2" style="text-decoration:underline;font-weight:700">#2 Philips Daily Collection HD9350</a><br><span style="color:#64748b;font-size:.82rem">Bästa budgetval</span></td><td>★ 4.7/5</td><td><strong>399 kr</strong></td><td><a class="btn btn-sm" href="https://www.amazon.se/s?k=Philips+HD9350&amp;tag=kopguiden0e-21" target="_blank" rel="nofollow sponsored noopener">Kolla pris →</a></td></tr><tr><td><a href="#prod-3" style="text-decoration:underline;font-weight:700">#3 Bosch TWK7203</a><br><span style="color:#64748b;font-size:.82rem">Bästa temperaturkontroll</span></td><td>★ 4.7/5</td><td><strong>799 kr</strong></td><td><a class="btn btn-sm" href="https://www.amazon.se/s?k=Bosch+TWK7203&amp;tag=kopguiden0e-21" target="_blank" rel="nofollow sponsored noopener">Kolla pris →</a></td></tr></tbody></table></div></div>
   <article id="prod-1" class="prod-card winner">
   <div class="prod-head"><div><span class="badge">#1 • Bäst i test 2026</span><h2 class="prod-title">Smeg KLF04 Variabel Temperatur</h2><div class="brand-sub">Tillverkare: Smeg • Uppdaterad 2026-11-20</div></div><div class="rating-box"><span class="stars">★★★★★</span> 4.8/5</div></div>
@@ -230,6 +254,41 @@ body.sticky-on #kg-fab{bottom:78px}
   <p class="verdict">”Snygg, säker och tyst vattenkokare med exakt temperaturval.”</p>
   <div class="buy-row"><div><span class="price-now">Ca 799 kr</span><span class="price-old">999 kr</span><span class="save-tag">Spara 200 kr</span></div><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><button type="button" class="save-btn" data-n="Bosch TWK7203" data-p="799" data-u="https://www.amazon.se/s?k=Bosch+TWK7203&amp;tag=kopguiden0e-21" data-c="Vattenkokare" onclick="kgToggleSave(this)">♡ Spara</button><a class="btn" href="https://www.amazon.se/s?k=Bosch+TWK7203&amp;tag=kopguiden0e-21" target="_blank" rel="nofollow sponsored noopener">Kolla aktuellt pris hos Amazon.se →</a></div></div>
 </article>
+  <section id="kopbroms" class="kb-box">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+    <h2 style="margin:0">🛑 Köp-Bromsen: Behöver du verkligen en vattenkokare?</h2>
+    <a class="jump-pill" href="https://ken12347.github.io/kopguiden/duellen.html?cat=basta-vattenkokare">⚔️ Kör 1-mot-1-duell →</a>
+  </div>
+  <p class="tool-sub">Vi tjänar pengar om du köper – men vi säger ändå ifrån om det ser ut som ett impulsköp. Testa på 5 sekunder:</p>
+  <div class="t-grid">
+    <div class="t-field"><label>Hur ofta kommer du använda den?</label><select id="kb_f" onchange="runKB()"><option value="250">Nästan varje dag</option><option value="100" selected>2–3 gånger i veckan</option><option value="24">Någon gång i månaden</option><option value="6">Bara ett par gånger om året</option></select></div>
+    <div class="t-field"><label>Har du redan något hemma som duger?</label><select id="kb_h" onchange="runKB()"><option value="0" selected>Nej, saknar helt</option><option value="1">Ja, men gammal/trasig</option><option value="2">Ja, den funkar faktiskt okej</option></select></div>
+    <div class="t-field"><label>Hur känns ekonomin just nu?</label><select id="kb_w" onchange="runKB()"><option value="0" selected>Lugnt, pengarna finns</option><option value="1">Vill hålla igen lite</option><option value="2">Tänkte delbetala / Klarna</option></select></div>
+  </div>
+  <div id="kb_out" class="kb-res"></div>
+</section><script>
+const KB={"cat": "vattenkokare", "wn": "Smeg KLF04 Variabel Temperatur", "wp": 1890, "wu": "https://www.amazon.se/s?k=Smeg+KLF04&tag=kopguiden0e-21", "bn": "Philips Daily Collection HD9350", "bp": 399, "bu": "https://www.amazon.se/s?k=Philips+HD9350&tag=kopguiden0e-21", "m": "Amazon.se", "duel": "https://ken12347.github.io/kopguiden/duellen.html?cat=basta-vattenkokare"};let kbLast="";
+function runKB(){
+  const yr=+kb_f.value,have=+kb_h.value,wal=+kb_w.value,u3=yr*3;
+  const cpuW=Math.max(1,Math.round(KB.wp/u3)),cpuB=Math.max(1,Math.round(KB.bp/u3)),hrs=Math.max(1,Math.round(KB.wp/180));
+  const out=document.getElementById("kb_out");
+  if(wal===2||(have===2&&yr<=24)||(yr<=6&&KB.wp>1200)){
+    kbLast="KöpGuidens Köp-Broms sa åt mig att INTE köpa "+KB.cat+" (skulle bli "+cpuW+" kr/gång). Sparade precis "+KB.wp.toLocaleString("sv-SE")+" kr! "+location.href;
+    out.className="kb-res kb-stop";
+    out.innerHTML="<strong>🛑 DOM: KÖP DEN INTE!</strong> Det här luktar impulsköp. På 3 år hamnar du på ca <strong>"+cpuW+" kr per användning</strong> (och ca "+hrs+" arbetstimmar efter skatt). Stäng fliken, låna av en granne eller sov på saken i 48 timmar.<div style='margin-top:10px;display:flex;gap:8px;flex-wrap:wrap'><button type='button' class='save-btn' onclick='kbCopy(this)'>📋 Dela domen</button><a class='save-btn' style='text-decoration:none' href='"+KB.duel+"'>⚔️ Jämför i Duellen</a></div>";
+  }else if(wal===1||have===2||cpuW>35){
+    kbLast="Köp-Bromsen gav GULT LJUS för "+KB.cat+" – satsar på budgetvalet "+KB.bn+" ("+cpuB+" kr/gång). "+location.href;
+    out.className="kb-res kb-warn";
+    out.innerHTML="<strong>⚠️ DOM: SKIPPA PREMIUM – TA BUDGETVALET!</strong> Testvinnaren kostar "+cpuW+" kr/gång, men budgetvalet <strong>"+KB.bn+"</strong> landar på bara <strong>"+cpuB+" kr/gång</strong> (ca "+KB.bp.toLocaleString("sv-SE")+" kr) och gör jobbet utan onödigt svinn.<div style='margin-top:10px;display:flex;gap:8px;flex-wrap:wrap'><a class='btn btn-sm' href='"+KB.bu+"' target='_blank' rel='nofollow sponsored noopener'>Kolla "+KB.bn+" hos "+KB.m+" →</a><button type='button' class='save-btn' onclick='kbCopy(this)'>📋 Dela domen</button></div>";
+  }else{
+    kbLast="Köp-Bromsen gav GRÖNT LJUS för "+KB.wn+" – bara "+cpuW+" kr/användning över 3 år! "+location.href;
+    out.className="kb-res kb-go";
+    out.innerHTML="<strong>✅ DOM: GRÖNT LJUS – SMART KÖP!</strong> Vid den här användningen kostar testvinnaren <strong>"+KB.wn+"</strong> bara ca <strong>"+cpuW+" kr per gång</strong> över 3 år (motsvarar ca "+hrs+" arbetstimmar). Då lönar sig kvalitet i längden.<div style='margin-top:10px;display:flex;gap:8px;flex-wrap:wrap'><a class='btn btn-sm' href='"+KB.wu+"' target='_blank' rel='nofollow sponsored noopener'>Kolla "+KB.wn+" hos "+KB.m+" →</a><button type='button' class='save-btn' onclick='kbCopy(this)'>📋 Dela domen</button></div>";
+  }
+}
+function kbCopy(b){navigator.clipboard?.writeText(kbLast);b.textContent="✓ Kopierad!";setTimeout(()=>b.textContent="📋 Dela domen",2000);}
+runKB();
+</script>
   <section id="verktyg-box" class="tool-box"><h2>⚖️ Nytt vs. Begagnat – Lönar sig Blocket/Tradera för vattenkokare?</h2><p class="tool-sub">Testvinnaren <strong>Smeg KLF04 Variabel Temperatur</strong> kostar ca <strong>1 890 kr</strong> ny. Normal värdeminskning för hemelektronik – räkna in värdet av 2 års garanti och öppet köp. Vår smärtgräns för begagnat är <strong>1 170 kr</strong> (62 % av nypriset).</p><div class="t-grid"><div class="t-field"><label for="u_ask">Vad begär säljaren på Blocket / Tradera? (kr)</label><input id="u_ask" type="number" min="0" step="50" value="1440" oninput="calcUsed()"></div><div class="t-field"><label for="u_age">Skick &amp; kvitto</label><select id="u_age" onchange="calcUsed()"><option value="0">Bra skick, kvitto/garanti kvar</option><option value="0.08" selected>Använd, inget kvitto</option><option value="0.18">Sliten eller över 2 år gammal</option></select></div></div><div id="u_out" class="t-res"></div></section><script>function calcUsed(){const np=1890,base=0.62,ask=+document.getElementById("u_ask").value||0,pen=+document.getElementById("u_age").value||0,lim=Math.max(50,Math.round((np*(base-pen))/10)*10),diff=np-ask,el=document.getElementById("u_out");if(ask<=0){el.className="t-res";el.innerHTML="Skriv in priset från annonsen ovan så räknar vi ut om det är värt det.";return;}if(ask>lim){el.className="t-res warn";el.innerHTML="<strong>⚠️ För dyrt begagnat!</strong> Med valt skick bör du betala max <strong>"+lim.toLocaleString("sv-SE")+" kr</strong>. Du sparar bara <strong>"+Math.max(0,diff).toLocaleString("sv-SE")+" kr</strong> men tappar garanti och öppet köp. <div style=\"margin-top:10px\"><a class=\"btn btn-sm\" href=\"https://www.amazon.se/s?k=Smeg+KLF04&amp;tag=kopguiden0e-21\" target=\"_blank\" rel=\"nofollow sponsored noopener\">Köp ny med garanti hos Amazon.se →</a></div>";}else{el.className="t-res good";el.innerHTML="<strong>✅ Bra begagnatfynd!</strong> Priset ligger under vår smärtgräns ("+lim.toLocaleString("sv-SE")+" kr) och du sparar <strong>"+diff.toLocaleString("sv-SE")+" kr</strong> mot nypris. Kontrollera bara batteri/funktion före köp.";}}calcUsed();</script>
   <section id="faq" class="faq-box"><h2>Vanliga frågor om vattenkokare</h2><details open><summary>Vilken vattenkokare är bäst i test 2026?</summary><p>Vår testvinnare 2026 är Smeg KLF04 Variabel Temperatur (Smeg) med betyget 4.8/5.</p></details><details><summary>Vilket är det mest prisvärda budgetvalet för vattenkokare?</summary><p>För dig som vill hålla nere kostnaden rekommenderar vi Bosch TWK7203 till ett riktpris omkring 799 kr.</p></details><details><summary>Hur uppdateras priser och rekommendationer på KöpGuiden?</summary><p>Riktpriser och modellurval uppdateras löpande (senast 2026-11-20). Klicka vidare till återförsäljaren för exakt dagspris och lagerstatus.</p></details></section>
   <section class="rel-box"><h2>Fler populära köpguider 2026</h2><div class="rel-grid"><a class="rel-link" href="https://ken12347.github.io/kopguiden/basta-vaffeljarn.html">Våffeljärn →</a><a class="rel-link" href="https://ken12347.github.io/kopguiden/basta-airfryer.html">Airfryer →</a><a class="rel-link" href="https://ken12347.github.io/kopguiden/basta-kaffebryggare.html">Kaffebryggare →</a><a class="rel-link" href="https://ken12347.github.io/kopguiden/espressomaskin-med-kvarn.html">Kaffemaskin →</a></div></section>
@@ -250,6 +309,8 @@ body.sticky-on #kg-fab{bottom:78px}
       <a href="https://ken12347.github.io/kopguiden/hitta-ratt.html">Klapp- &amp; Köpväljaren</a>
       <a href="https://ken12347.github.io/kopguiden/verktyg.html">Smarta kalkylatorer</a>
       <a href="https://ken12347.github.io/kopguiden/basta-julklappstips-under-500.html">Julklappstips under 500 kr</a>
+      <a href="https://ken12347.github.io/kopguiden/duellen.html">⚔️ Duell-Arenan</a>
+      <a href="https://ken12347.github.io/kopguiden/kopbromsen.html">🛑 Köp-Bromsen</a>
       <a href="https://ken12347.github.io/kopguiden/om-oss.html">Så testar vi &amp; Annonspolicy</a>
     </div>
     <div class="foot-col">
