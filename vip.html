@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marknadsradarn VIP – Realtidsbevakning i Telegram</title>
+  <meta name="description" content="Automatisk realtidsbevakning i Telegram med verifierad prishistorik. Testa 24h smakprov gratis eller betala smidigt med Swish utan bindningstid.">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #f59e0b;
+      --green: #10b981;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 1020px; margin: 0 auto; padding: 24px 18px 64px; }
+    header { text-align: center; padding: 36px 0 28px; }
+    .badge {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.15; margin: 0 0 14px; }
+    .lead { color: var(--muted); font-size: 1.08rem; max-width: 680px; margin: 0 auto 24px; }
+    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.98rem;
+      text-align: center;
+    }
+    .btn-primary { background: var(--accent); color: #0f172a; }
+    .btn-secondary { background: var(--card); color: var(--text); border: 1px solid var(--border); }
+    .proof-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin: 28px 0 36px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .proof-item strong { display: block; color: var(--green); font-size: 1.2rem; }
+    .proof-item span { color: var(--muted); font-size: 0.92rem; }
+    h2 { font-size: 1.55rem; margin: 38px 0 16px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card.featured { border: 2px solid var(--accent); }
+    .tag {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .card h3 { margin: 6px 0 8px; font-size: 1.3rem; }
+    .price { font-size: 1.7rem; font-weight: 800; margin: 10px 0; }
+    .price small { font-size: 0.9rem; font-weight: 400; color: var(--muted); }
+    ul { padding-left: 18px; color: #cbd5e1; margin: 12px 0 20px; }
+    li { margin-bottom: 8px; }
+    .card-links { display: flex; flex-direction: column; gap: 8px; }
+    .example {
+      background: #0b1220;
+      border-left: 3px solid var(--green);
+      padding: 14px 16px;
+      border-radius: 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.86rem;
+      color: #e2e8f0;
+      white-space: pre-line;
+      margin: 18px 0;
+    }
+    .steps-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      margin: 28px 0;
+    }
+    .faq { margin-top: 40px; }
+    details {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+    }
+    summary { font-weight: 700; cursor: pointer; }
+    details p { color: var(--muted); margin: 10px 0 0; }
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge">Automatisk bevakning 24/7 i Telegram</div>
+      <h1>Sluta uppdatera annonssidor manuellt.<br>Få larm på sekunden när klippet släpps.</h1>
+      <p class="lead">
+        Våra bevakningsmotorer skannar svenska andrahandsmarknader dygnet runt och räknar automatiskt ut marginalen mot verkliga historiska slutpriser innan det plingar i din mobil.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#paket">Välj bevakningspaket</a>
+        <a class="btn btn-secondary" href="https://t.me/verktygsradarn" target="_blank" rel="noopener">Testa 24h Smakprov gratis</a>
+      </div>
+    </header>
+
+    <section class="proof-box">
+      <div class="proof-item">
+        <strong>Verifierat facit</strong>
+        <span>Varje objekt jämförs automatiskt mot hundratals avslutade auktioner.</span>
+      </div>
+      <div class="proof-item">
+        <strong>AI-brusfiltrering</strong>
+        <span>Trasiga maskiner, tomma lådor och överpriser rensas bort innan utskick.</span>
+      </div>
+      <div class="proof-item">
+        <strong>Max 15 platser</strong>
+        <span>Begränsat antal medlemmar för att undvika budkrig på samma annons.</span>
+      </div>
+    </section>
+
+    <h2>Så ser ett realtidslarm ut i mobilen</h2>
+    <div class="example">🔧 VERKTYGSFYND (Andrahandsmarknad)
+Makita DDF486Z 18V Borrskruvdragare + 2x 5.0Ah batterier
+
+💰 Pris: 1 350 kr (Kan skickas)
+📊 Historiskt slutpris: ca 2 450 kr (Makita DDF486)
+📈 Est. nettomarginal: +786 kr (efter 10 % avgift & frakt)
+📍 Leverans/Ort: Halland</div>
+
+    <h2 id="paket">Välj din bevakningskanal</h2>
+    <div class="grid">
+      <article class="card featured">
+        <div>
+          <span class="tag">Mest populär • Max 15 platser</span>
+          <h3>🔧 Verktygsradarn VIP</h3>
+          <div class="price">249 kr <small>/ 30 dagar (inkl. moms)</small></div>
+          <p style="color:var(--muted);font-size:0.93rem;">För hantverkare, hemmafixare och verktygsflippers.</p>
+          <ul>
+            <li>Realtidslarm var 4:e–5:e minut på Makita, HiKOKI, Fein, Festool, Milwaukee & DeWalt</li>
+            <li>Endast objekt med minst +300 kr beräknad nettomarginal</li>
+            <li>Paketvärdering räknar ihop värdet när flera maskiner säljs ihop</li>
+            <li>Betala med Swish (kvitto via Frilans Finans) – ingen automatisk förnyelse eller bindningstid</li>
+          </ul>
+        </div>
+        <div class="card-links">
+          <a class="btn btn-primary" href="https://app.swish.nu/check-in/FF01/ZRVC7T9KNU" target="_blank" rel="noopener">Köp 30-dagarspass med Swish (249 kr)</a>
+          <a class="btn btn-secondary" href="https://t.me/verktygsradarn" target="_blank" rel="noopener">Se 24h smakprov gratis i Telegram</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div>
+          <span class="tag">Max 25 platser</span>
+          <h3>📚 Bokradarn VIP</h3>
+          <div class="price">149 kr <small>/ 30 dagar (inkl. moms)</small></div>
+          <p style="color:var(--muted);font-size:0.93rem;">För boksamlare, rollspelare och antikvariat.</p>
+          <ul>
+            <li>Bevakar 55+ samlarkategorier (bl.a. Äventyrsspel, 1:a-upplagor & konstböcker)</li>
+            <li>Skannar flera svenska marknadsplatser var 30:e minut</li>
+            <li>Automatisk jämförelse mot historiska slutpriser</li>
+            <li>Enkel Swish-betalning för 30 dagar utan bindningstid</li>
+          </ul>
+        </div>
+        <div class="card-links">
+          <a class="btn btn-primary" href="https://app.swish.nu/check-in/FF01/P4U7QV9WTA" target="_blank" rel="noopener">Köp 30-dagarspass med Swish (149 kr)</a>
+          <a class="btn btn-secondary" href="https://t.me/bokradar" target="_blank" rel="noopener">Se 24h smakprov gratis i Telegram</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div>
+          <span class="tag">Företag & Byråer (B2B)</span>
+          <h3>🏢 Konkurs- & Domänradar</h3>
+          <div class="price">Från 490 kr <small>/ mån exkl. moms</small></div>
+          <p style="color:var(--muted);font-size:0.93rem;">Dagliga morgonlistor i Telegram för uppköpare och SEO-byråer.</p>
+          <ul>
+            <li><strong>Svensk Domänradar (490 kr/mån):</strong> Topprankade utgående .se-domäner varje morgon</li>
+            <li><strong>Konkurs- & Bolagsradar (1 290 kr/mån):</strong> Nya AB/HB/KB-konkurser med omsättning & affärsvinkel</li>
+            <li>Faktura med 30 dagar netto via Frilans Finans (F-skatt & moms)</li>
+          </ul>
+        </div>
+        <div class="card-links">
+          <a class="btn btn-primary" href="mailto:ken.eriksson96@gmail.com?subject=Intresse%20B2B-radar">Be om 7 dagars gratis smakprov</a>
+        </div>
+      </article>
+    </div>
+
+    <section class="steps-box">
+      <h2 style="margin-top:0;">Så kommer du igång på 2 minuter</h2>
+      <ol style="color:#cbd5e1;padding-left:20px;margin-bottom:0;">
+        <li><strong>Betala med Swish:</strong> Klicka på knappen för valt 30-dagarspass (betalning och kvitto hanteras säkert via Frilans Finans).</li>
+        <li><strong>Skicka ditt Telegram-namn:</strong> Mejla <a href="mailto:ken.eriksson96@gmail.com" style="color:var(--accent);">ken.eriksson96@gmail.com</a> (eller skriv i Telegram) med ditt användarnamn så får du din personliga engångslänk till VIP-kanalen direkt.</li>
+        <li><strong>Slå på notiser:</strong> Aktivera ljudnotiser för VIP-kanalen i Telegram så att du hinner före andra köpare.</li>
+      </ol>
+    </section>
+
+    <section class="faq">
+      <h2>Vanliga frågor</h2>
+      <details>
+        <summary>Dras det pengar automatiskt nästa månad?</summary>
+        <p>Nej. Du köper ett 30-dagarspass åt gången med Swish – inga dolda abonnemang eller uppsägningstider. Vill du fortsätta efter 30 dagar swishar du bara för en ny period.</p>
+      </details>
+      <details>
+        <summary>Varför är det max 15 platser i Verktygsradarn VIP?</summary>
+        <p>Om hundratals personer får samma larm blir det budkrig på sekunden. Med ett strikt tak på 15 medlemmar hinner du faktiskt genomföra affärerna.</p>
+      </details>
+      <details>
+        <summary>Hur fungerar 24h Smakprov-kanalerna?</summary>
+        <p>Varje dygn publiceras utvalda toppfynd i den öppna kanalen exakt 24 timmar efter att VIP-medlemmarna fick dem. Då ser du träffsäkerheten innan du bestämmer dig.</p>
+      </details>
+    </section>
+
+    <footer>
+      <p>Marknadsradarn &bull; Automatiserad bevakning och prisanalys. Fakturering och Swish-betalning via egenanställning hos Frilans Finans. Kontakt: ken.eriksson96@gmail.com.</p>
+    </footer>
+  </div>
+</body>
+</html>
